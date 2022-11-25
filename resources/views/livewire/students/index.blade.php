@@ -1,6 +1,6 @@
 <div class="max-w-3xl mx-auto my-10">
     <div class="space-y-4">
-        <h1 class="text-2xl font-black text-gray-800">Simple CRUD Laravel + Livewire</h1>
+        <h1 class="text-2xl font-black text-gray-800">Crud autor Abraão </h1>
         @if ($formVisible)
             @if ($formVisible === 'edit')
                 <livewire:students.edit />
@@ -8,7 +8,7 @@
                 <livewire:students.create />
             @endif
         @else
-            <button wire:click="create" class="btn btn-primary">New</button>
+            <button wire:click="create" class="btn btn-primary">Adicionar</button>
         @endif
     </div>
     <hr class="my-6">
@@ -29,16 +29,16 @@
                 <option>10</option> 
                 <option>15</option>
             </select>
-            <input wire:model="search" type="search" placeholder="Search..." class="input input-bordered">
+            <input wire:model="search" type="search" placeholder="Pesquisar..." class="input input-bordered">
         </div>
         <div class="overflow-x-auto">
             <table class="table w-full">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Photo</th>
-                        <th>NIS</th> 
-                        <th>Name</th> 
+                        <th>Foto</th>
+                        <th>Numero</th> 
+                        <th>Nome</th> 
                         <th>Handle</th>
                     </tr>
                 </thead> 
@@ -56,13 +56,13 @@
                             <td class="align-baseline">{{ $student->nis }}</td> 
                             <td class="align-baseline">{{ $student->name }}</td>
                             <td class="align-baseline">
-                                <button wire:click="edit({{ $student->id }})" class="btn btn-warning">Edit</button>
-                                <button wire:click="destroy({{ $student->id }})" class="btn btn-error">Delete</button>
+                                <button wire:click="edit({{ $student->id }})" class="btn btn-warning">Editar</button>
+                                <button wire:click="destroy({{ $student->id }})" class="btn btn-error">Deletar</button>
                             </td>
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="5">Not Found</td>
+                            <td colspan="5">Não encontrado</td>
                         </tr>
                     @endforelse
                 </tbody>

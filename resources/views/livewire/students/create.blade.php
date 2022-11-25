@@ -2,9 +2,9 @@
     <div class="grid grid-cols-2 gap-2">
         <div class="form-control">
             <label class="label">
-                <span class="label-text">NIS</span>
+                <span class="label-text">Numero</span>
             </label> 
-            <input wire:model="nis" type="number" placeholder="NIS" class="input @error('nis') input-error @enderror input-bordered">
+            <input wire:model="nis" type="number" placeholder="Adicione um número" class="input @error('nis') input-error @enderror input-bordered">
             @error('nis')
                 <label class="label">
                     <span class="label-text-alt">{{ $message }}</span>
@@ -13,9 +13,9 @@
         </div>
         <div class="form-control">
             <label class="label">
-                <span class="label-text">Name</span>
+                <span class="label-text">Nome</span>
             </label> 
-            <input wire:model="name" type="text" placeholder="Name" class="input @error('name') input-error @enderror input-bordered">
+            <input wire:model="name" type="text" placeholder="Nome" class="input @error('name') input-error @enderror input-bordered">
             @error('name')
                 <label class="label">
                     <span class="label-text-alt">{{ $message }}</span>
@@ -33,14 +33,14 @@
                     </div>
                 </div>
             @endif
-            <label class="btn btn-sm" for="photo">Upload Photo</label>
+            <label class="btn btn-sm" for="photo">Adicione uma foto</label>
             <input class="absolute pointer-events-none opacity-0" type="file" wire:model="photo" id="photo">
         </div>
         @error('photo')
             <p class="text-sm">{{ $message }}</p>
         @enderror
     </div>
-    <button class="btn btn-primary">Create</button>
+    <button class="btn btn-primary">Adicionar</button>
     {{-- Kirim emit untuk trigger menutup form --}}
-    <button type="button" wire:click="$emit('closeForm')" class="btn">Cancel</button>
+    <button type="button" wire:click="$emit('closeForm')" class="btn">Excluir</button>
 </form>

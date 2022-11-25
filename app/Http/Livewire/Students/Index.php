@@ -40,7 +40,7 @@ class Index extends Component
     // Untuk menampilkan notifikasi dari emit yang dikirim dari komponen create
     public function studentAdded()
     {
-        session()->flash('message', 'Student added successfully');
+        session()->flash('message', 'Usuario adicionado com sucesso!');
         // Tutup form
         $this->closeForm();
     }
@@ -62,7 +62,7 @@ class Index extends Component
         }
 
         // Untuk memberi notifikasi
-        session()->flash('message', 'Student deleted successfully');
+        session()->flash('message', 'Usuario excluido com sucesso!');
     }
 
     // Untuk menampilkan form edit
@@ -76,7 +76,7 @@ class Index extends Component
     // Untuk menampilkan notifikasi dari emit yang dikirim dari komponen edit
     public function studentEdited()
     {
-        session()->flash('message', 'Student edited successfully');
+        session()->flash('message', 'Usuario editado com sucesso!');
         // Tutup form
         $this->closeForm();
     }
